@@ -199,6 +199,9 @@ public class PerfTest
                 if (lastCoordinates[0] != currentCoordinates[0] ||
                     lastCoordinates[1] != currentCoordinates[1])
                 {
+                	if(currentCoordinates[0] != currentCoordinates[1]) {
+                		throw new IllegalStateException("("+currentCoordinates[0]+","+currentCoordinates[1]+")");
+                	}
                     ++observedMoves;
                     lastCoordinates[0] = currentCoordinates[0];
                     lastCoordinates[1] = currentCoordinates[1];
